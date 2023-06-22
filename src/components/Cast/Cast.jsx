@@ -8,7 +8,6 @@ const DEFAULT_FOTO =
 export const Cast = () => {
   const [credits, setCredits] = useState([]);
   const { movieId } = useParams();
-  console.log(credits);
 
   useEffect(() => {
     fetchMovieCastById(movieId).then(setCredits);

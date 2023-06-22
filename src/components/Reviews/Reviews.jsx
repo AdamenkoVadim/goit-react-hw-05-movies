@@ -5,7 +5,6 @@ import { fetchMovieReviewById } from 'services/api';
 export const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
-  console.log(reviews);
 
   useEffect(() => {
     fetchMovieReviewById(movieId).then(setReviews);

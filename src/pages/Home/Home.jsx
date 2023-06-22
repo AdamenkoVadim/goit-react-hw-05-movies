@@ -12,7 +12,6 @@ export default function Home() {
     fetchTrandingMovies().then(setMovies);
   }, []);
 
-  console.log(movies);
   return (
     <>
       <h2 style={{ marginLeft: '20px' }}>Trending today</h2>
