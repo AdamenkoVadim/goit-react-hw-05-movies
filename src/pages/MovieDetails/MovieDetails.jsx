@@ -1,6 +1,8 @@
-import { useFetchMovie } from 'hooks/useFetchMovie';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchMovieById } from 'services/api';
 import {
   ContainerMovieDetails,
   BtnGoBack,
@@ -13,6 +15,15 @@ import {
 } from './MovieDetails.styled';
 
 export default function MovieDetails() {
+  const useFetchMovie = () => {
+    const [movie, setMovie] = useState(null);
+    const { movieId } = useParams();
+
+    useEffect(() => {
+      fetchMovieById(movieId).then(setMovie);
+    }, [movieId]);
+    return movie;
+  };
   const movie = useFetchMovie();
   const location = useLocation();
   const navigate = useNavigate();
