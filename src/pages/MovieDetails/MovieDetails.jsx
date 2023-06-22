@@ -35,7 +35,7 @@ export default function MovieDetails() {
           type="button"
           onClick={() => navigate(location?.state?.from ?? '/')}
         >
-          Go back
+          ⬅️ Go back
         </BtnGoBack>
         <ContainerMovieDetails>
           <div>

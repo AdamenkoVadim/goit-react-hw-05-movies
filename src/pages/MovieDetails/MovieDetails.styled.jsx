@@ -45,7 +45,7 @@ export const HrMovieDetails = styled.hr`
 
 export const AddInfoLink = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: blue;
   text-decoration: none;
   font-weight: 500;
   margin-top: 7px;
